@@ -8,33 +8,33 @@ public class TareaAcademica01 {
         Scanner teclado = new Scanner(System.in);
         final short UIT =4950;
         final int MONTO_FIJO = UIT * 7;
-        System.out.print("Ingrese el salario anul obtenido: ");
+        System.out.print("Ingrese el salario anual obtenido: ");
         float salarioAnual = teclado.nextFloat();
-        float remuneracionNetoAnual = (float) (salarioAnual - MONTO_FIJO);
-        float total = 0;
-        if (remuneracionNetoAnual >= 0){
-            if (remuneracionNetoAnual <= (5*UIT)){
-                total = (float) (remuneracionNetoAnual * 0.08);
+        float remuneracionNetaAnual = (float) (salarioAnual - MONTO_FIJO);
+        float impuestoRenta = 0;
+        if (remuneracionNetaAnual > 0){
+            if (remuneracionNetaAnual <= (5*UIT)){
+                impuestoRenta = (float) (remuneracionNetaAnual * 0.08);
             } else {
-                if (remuneracionNetoAnual <= (20*UIT)){
-                    total = (float) (remuneracionNetoAnual * 0.14);
+                if (remuneracionNetaAnual <= (20*UIT)){
+                    impuestoRenta = (float) (remuneracionNetaAnual * 0.14);
                 } else {
-                    if (remuneracionNetoAnual <= (35*UIT)){
-                        total = (float) (remuneracionNetoAnual * 0.17);
+                    if (remuneracionNetaAnual <= (35*UIT)){
+                        impuestoRenta = (float) (remuneracionNetaAnual * 0.17);
                     } else {
-                        if (remuneracionNetoAnual <= (45*UIT)){
-                            total = (float) (remuneracionNetoAnual * 0.2);
+                        if (remuneracionNetaAnual <= (45*UIT)){
+                            impuestoRenta = (float) (remuneracionNetaAnual * 0.2);
                         } else {
-                            total = (float) (remuneracionNetoAnual * 0.3);
+                            impuestoRenta = (float) (remuneracionNetaAnual * 0.3);
                         }
                     }
                 }
             }
         } else {
-            System.out.println("Error, el monto del Remuneación Neta Anual es negativo.");
+            System.out.println("Usted no pagará nada ya que el salario anual es menor que el monto fijo.");
         }
-        if (total > 0){
-            System.out.printf("El monto total es S/%.2f %n",total);
+        if (impuestoRenta > 0){
+            System.out.printf("El impuesto a la renta a pagar es S/%.2f soles. %n",impuestoRenta);
         }
     }
     
