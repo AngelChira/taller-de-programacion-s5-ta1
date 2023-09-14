@@ -34,7 +34,7 @@ public class TareaAcademica01 {
                     }
                 }
             } else {
-                System.out.printf("Usted no pagará nada ya que el salario anual es menor que el monto fijo que equivale a S/%d soles.%n",MONTO_FIJO);
+                System.out.printf("Usted no pagará nada ya que el salario anual es menor o igual que el monto fijo que equivale a S/%d soles.%n",MONTO_FIJO);
             }
             if (impuestoRenta > 0){
                 System.out.printf("El impuesto a la renta a pagar es S/%.2f soles. %n",impuestoRenta);
